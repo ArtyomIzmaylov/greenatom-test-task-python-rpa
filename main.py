@@ -1,16 +1,16 @@
 from fastapi import FastAPI
 import subprocess
-
+import os
 
 app = FastAPI()
 robot_process = None
 
-@app.get("/start_robot")
-async def start_robot():
+@app.get("/start_robot/{start_number:int}")
+async def start_robot(start_number: int = 0):
     global robot_process
     if robot_process is None or robot_process.poll() is not None:
-        robot_process = subprocess.Popen(["python", "robot.py", "run"])
-        return {"message": "Robot starts", "pid": robot_process.pid}
+        robot_process = subprocess.Popen(["python", "robot.py", "run", str(start_number)])
+        return {"message": "Robot start", "pid": robot_process.pid, "start_number": start_number}
     else:
         return {"message": "Robot is already start"}
 
