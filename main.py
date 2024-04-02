@@ -41,4 +41,5 @@ async def get_runs():
     cur = global_conn.cursor()
     cur.execute("SELECT * FROM runs")
     rows = cur.fetchall()
-    return {"runs": rows}
+    runs = [{"id": row[0], "start_number": row[1], "start_time": row[2], "duration": row[3]} for row in rows]
+    return {"runs": runs}
