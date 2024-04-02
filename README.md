@@ -15,4 +15,4 @@ uvicorn main:app --reload
 1. Swagger - http://127.0.0.1:8000/docs
 2. `/start_robot/{start_number:int}` - Эндпоинт для запуск робота
 3. `/stop_robot` - Эндпоинт для остановки робота
-4. `/runs` - Эндпоинт для получения информации о времени запуска/остановки робота
+4. `/runs` - Эндпоинт для получения информации о id, start_number, start_time(время запуска), duration(длительность)
