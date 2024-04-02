@@ -5,9 +5,12 @@
 ## Установка
 
 1. git clone https://github.com/yourusername/yourrepository.git
-2. pip install -r requirements.txt
+2. python -m venv venv
+3. venv/Scripts/activate
+4. pip install -r requirements.txt
 
 ## Запууск
+
 uvicorn main:app --reload
 
 ## Тестирование
