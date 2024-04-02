@@ -4,13 +4,13 @@
 
 ## Установка
 
-2. git clone https://github.com/yourusername/yourrepository.git
+1. git clone https://github.com/yourusername/yourrepository.git
 
 ## Локальное развертывание
 
-2. python -m venv venv
-3. venv/Scripts/activate (windows)
-4. source venv/Scripts/activate (linux)
+1. python -m venv venv
+2. venv/Scripts/activate (windows)
+3. source venv/bin/activate (linux)
 4. pip install -r requirements.txt
 
 ## Запууск
