@@ -9,7 +9,8 @@
 ## Локальное развертывание
 
 2. python -m venv venv
-3. venv/Scripts/activate
+3. venv/Scripts/activate (windows)
+4. source venv/Scripts/activate (linux)
 4. pip install -r requirements.txt
 
 ## Запууск
