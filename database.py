@@ -29,3 +29,12 @@ def insert_run(conn, start_number, start_time, duration):
     cur = conn.cursor()
     cur.execute(sql, (start_number, start_time, duration))
     return cur.lastrowid
+
+
+def update_duration(conn, run_id, duration):
+    sql = ''' UPDATE runs
+              SET duration = ?
+              WHERE id = ? '''
+    cur = conn.cursor()
+    cur.execute(sql, (duration, run_id))
+    conn.commit()
