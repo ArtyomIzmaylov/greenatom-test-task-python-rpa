@@ -1,6 +1,5 @@
 from fastapi import FastAPI
 import subprocess
-import sys
 from database import create_connection, create_table, insert_run, update_duration
 import datetime
 
